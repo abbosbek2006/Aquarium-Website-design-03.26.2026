@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Aquarium Website</title>
+  </head>
+  <body>
+    <!-- Header Section Code -->
+    <header class="header" id="header">
+      <div class="container nav">
+        <div class="logo">AQUARIUM</div>
+
+        <nav class="menu">
+          <a href="#">Океанариум</a>
+          <a href="#">Услуги</a>
+          <a href="#">Цены</a>
+          <a href="#">Отзывы</a>
+          <a href="#">Галерея</a>
+          <a href="#">Контакты</a>
+        </nav>
+
+        <div class="phone">+998 97 575 46 06</div>
+      </div>
+    </header>
+
+    <!-- Hero Section Code -->
+    <section class="hero">
+      <div class="slides">
+        <div class="slide active">
+          <video autoplay muted loop playsinline preload="auto">
+            <source src="img/hero video bacround 1.dat" type="video/mp4" />
+          </video>
+
+          <div class="hero-overlay"></div>
+
+          <div class="hero-content container">
+            <div class="hero-left">
+              <p class="subtitle">Живая морская природа</p>
+              <h1>КРУПНЕЙШИЙ<br />ОКЕАНАРИУМ<br />В РОССИИ</h1>
+              <p class="desc">Более 12 000 обитателей</p>
+              <button class="btn">Купить билет</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <video autoplay muted loop playsinline preload="auto">
+            <source src="img/hero video bacround.dat" type="video/mp4" />
+          </video>
+
+          <div class="hero-overlay"></div>
+
+          <div class="hero-content container">
+            <div class="hero-left">
+              <p class="subtitle">Глубины океана</p>
+              <h1>ПОГРУЗИСЬ В МИР<br />ПОД ВОДОЙ</h1>
+              <p class="desc">Уникальные морские существа</p>
+              <button class="btn">Смотреть тур</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <video autoplay muted loop playsinline preload="auto">
+            <source
+              src="img/welcome hero vedio bacround.dat"
+              type="video/mp4"
+            />
+          </video>
+
+          <div class="hero-overlay"></div>
+
+          <div class="hero-content container">
+            <div class="hero-left">
+              <p class="subtitle">Новые эмоции</p>
+              <h1>ОТКРОЙ ДЛЯ СЕБЯ<br />НОВЫЙ МИР</h1>
+              <p class="desc">Невероятные впечатления</p>
+              <button class="btn">Начать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <!-- Animals Section Code -->
+
+    <section class="animals">
+      <h2 class="animals-title">ОБИТАТЕЛИ</h2>
+
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="card"><img src="img/img galery 1.webp" /></div>
+          <div class="card"><img src="img/img galery 2.jpg" /></div>
+          <div class="card"><img src="img/img galery 3.webp" /></div>
+          <div class="card"><img src="img/img galery 4.jpg" /></div>
+          <div class="card"><img src="img/img galery  5.webp" /></div>
+          <div class="card"><img src="img/img galery 6.jpg" /></div>
+          <div class="card"><img src="img/img galery 7.jpg" /></div>
+          <div class="card"><img src="img/img galery 8.jpg" /></div>
+          <div class="card"><img src="img/img galery 9.jpg" /></div>
+          <div class="card"><img src="img/img galery 10.jpg" /></div>
+        </div>
+      </div>
+      <button class="arrow left">&#10094;</button>
+      <div class="dots"></div>
+      <button class="arrow right">&#10095;</button>
+    </section>
+
+    <!-- Services-sec Section Code -->
+
+    <section class="services-sec">
+      <h2 class="services-title">УСЛУГИ</h2>
+
+      <div class="services-wrapper">
+        <div class="services-main">
+          <img id="servicesMainImg" src="img/img Services-sec 1.jpg" />
+        </div>
+
+        <div class="services-content">
+          <h3 id="servicesHeading">ФОТОСЕССИЯ В МОРСКИХ ГЛУБИНАХ</h3>
+          <p id="servicesText">
+            Каждый день в океанариуме работает профессиональные фотографы...
+          </p>
+          <button class="services-btn">Узнать стоимость</button>
+        </div>
+      </div>
+
+      <div class="services-thumbs">
+        <img class="services-thumb active" src="img/img Services-sec 1.jpg" />
+        <img class="services-thumb" src="img/img Services-sec 2.jpg" />
+        <img class="services-thumb" src="img/img Services-sec 3.jpg" />
+        <img class="services-thumb" src="img/img Services-sec 4.jpg" />
+      </div>
+    </section>
+
+    <!-- Pricing-slider Section Code -->
+
+    <section class="pricing-sec">
+      <h2 class="pricing-title">ЦЕНЫ</h2>
+
+      <div class="pricing-slider">
+        <button class="pricing-arrow left">&#10094;</button>
+
+        <div class="pricing-viewport">
+          <div class="pricing-track">
+            <div class="pricing-card">
+              <div class="pricing-card-inner">
+                <h3 class="pricing-card-title">ВХОДНОЙ БИЛЕТ</h3>
+
+                <ul class="pricing-list">
+                  <li><span>Дети до 4 лет</span> <b>300р</b></li>
+                  <li><span>Взрослые</span> <b>800р</b></li>
+                  <li><span>Школьники</span> <b>450р</b></li>
+                  <li><span>Студенты</span> <b>500р</b></li>
+                  <li><span>Пенсионеры</span> <b>400р</b></li>
+                </ul>
+
+                <div class="pricing-divider"></div>
+
+                <div class="pricing-free">
+                  <p>Бесплатно:</p>
+                  <span>Дети до 3-х лет</span><br />
+                  <span>Контактные зоны</span>
+                </div>
+
+                <button class="pricing-btn">Купить билет</button>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-card-inner">
+                <h3 class="pricing-card-title">ВХОДНОЙ БИЛЕТ</h3>
+
+                <ul class="pricing-list">
+                  <li><span>Дети до 4 лет</span> <b>300р</b></li>
+                  <li><span>Взрослые</span> <b>800р</b></li>
+                  <li><span>Школьники</span> <b>450р</b></li>
+                  <li><span>Студенты</span> <b>500р</b></li>
+                  <li><span>Пенсионеры</span> <b>400р</b></li>
+                </ul>
+
+                <div class="pricing-divider"></div>
+
+                <div class="pricing-free">
+                  <p>Бесплатно:</p>
+                  <span>Дети до 3-х лет</span><br />
+                  <span>Контактные зоны</span>
+                </div>
+
+                <button class="pricing-btn">Купить билет</button>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-card-inner">
+                <h3 class="pricing-card-title">ВХОДНОЙ БИЛЕТ</h3>
+
+                <ul class="pricing-list">
+                  <li><span>Дети до 4 лет</span> <b>300р</b></li>
+                  <li><span>Взрослые</span> <b>800р</b></li>
+                  <li><span>Школьники</span> <b>450р</b></li>
+                  <li><span>Студенты</span> <b>500р</b></li>
+                  <li><span>Пенсионеры</span> <b>400р</b></li>
+                </ul>
+
+                <div class="pricing-divider"></div>
+
+                <div class="pricing-free">
+                  <p>Бесплатно:</p>
+                  <span>Дети до 3-х лет</span><br />
+                  <span>Контактные зоны</span>
+                </div>
+
+                <button class="pricing-btn">Купить билет</button>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-card-inner">
+                <h3 class="pricing-card-title">ВХОДНОЙ БИЛЕТ</h3>
+
+                <ul class="pricing-list">
+                  <li><span>Дети до 4 лет</span> <b>300р</b></li>
+                  <li><span>Взрослые</span> <b>800р</b></li>
+                  <li><span>Школьники</span> <b>450р</b></li>
+                  <li><span>Студенты</span> <b>500р</b></li>
+                  <li><span>Пенсионеры</span> <b>400р</b></li>
+                </ul>
+
+                <div class="pricing-divider"></div>
+
+                <div class="pricing-free">
+                  <p>Бесплатно:</p>
+                  <span>Дети до 3-х лет</span><br />
+                  <span>Контактные зоны</span>
+                </div>
+
+                <button class="pricing-btn">Купить билет</button>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-card-inner">
+                <h3 class="pricing-card-title">ВХОДНОЙ БИЛЕТ</h3>
+
+                <ul class="pricing-list">
+                  <li><span>Дети до 4 лет</span> <b>300р</b></li>
+                  <li><span>Взрослые</span> <b>800р</b></li>
+                  <li><span>Школьники</span> <b>450р</b></li>
+                  <li><span>Студенты</span> <b>500р</b></li>
+                  <li><span>Пенсионеры</span> <b>400р</b></li>
+                </ul>
+
+                <div class="pricing-divider"></div>
+
+                <div class="pricing-free">
+                  <p>Бесплатно:</p>
+                  <span>Дети до 3-х лет</span><br />
+                  <span>Контактные зоны</span>
+                </div>
+
+                <button class="pricing-btn">Купить билет</button>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-card-inner">
+                <h3 class="pricing-card-title">ВХОДНОЙ БИЛЕТ</h3>
+
+                <ul class="pricing-list">
+                  <li><span>Дети до 4 лет</span> <b>300р</b></li>
+                  <li><span>Взрослые</span> <b>800р</b></li>
+                  <li><span>Школьники</span> <b>450р</b></li>
+                  <li><span>Студенты</span> <b>500р</b></li>
+                  <li><span>Пенсионеры</span> <b>400р</b></li>
+                </ul>
+
+                <div class="pricing-divider"></div>
+
+                <div class="pricing-free">
+                  <p>Бесплатно:</p>
+                  <span>Дети до 3-х лет</span><br />
+                  <span>Контактные зоны</span>
+                </div>
+
+                <button class="pricing-btn">Купить билет</button>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-card-inner">
+                <h3 class="pricing-card-title">ВХОДНОЙ БИЛЕТ</h3>
+
+                <ul class="pricing-list">
+                  <li><span>Дети до 4 лет</span> <b>300р</b></li>
+                  <li><span>Взрослые</span> <b>800р</b></li>
+                  <li><span>Школьники</span> <b>450р</b></li>
+                  <li><span>Студенты</span> <b>500р</b></li>
+                  <li><span>Пенсионеры</span> <b>400р</b></li>
+                </ul>
+
+                <div class="pricing-divider"></div>
+
+                <div class="pricing-free">
+                  <p>Бесплатно:</p>
+                  <span>Дети до 3-х лет</span><br />
+                  <span>Контактные зоны</span>
+                </div>
+
+                <button class="pricing-btn">Купить билет</button>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-card-inner">
+                <h3 class="pricing-card-title">ВХОДНОЙ БИЛЕТ</h3>
+
+                <ul class="pricing-list">
+                  <li><span>Дети до 4 лет</span> <b>300р</b></li>
+                  <li><span>Взрослые</span> <b>800р</b></li>
+                  <li><span>Школьники</span> <b>450р</b></li>
+                  <li><span>Студенты</span> <b>500р</b></li>
+                  <li><span>Пенсионеры</span> <b>400р</b></li>
+                </ul>
+
+                <div class="pricing-divider"></div>
+
+                <div class="pricing-free">
+                  <p>Бесплатно:</p>
+                  <span>Дети до 3-х лет</span><br />
+                  <span>Контактные зоны</span>
+                </div>
+
+                <button class="pricing-btn">Купить билет</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="pricing-arrow right">&#10095;</button>
+      </div>
+
+      <div class="pricing-dots"></div>
+    </section>
+
+    <!-- Testimonials-Section Code -->
+
+    <section class="testimonials-sec">
+      <h2 class="testimonials-title">ОТЗЫВЫ</h2>
+
+      <div class="testimonials-slider">
+        <button class="test-arrow left">&#10094;</button>
+
+        <div class="test-track">
+          <div class="test-card">
+            <div class="test-top">
+              <img src="img/img Services-sec 3.jpg" class="test-avatar" />
+
+              <div class="test-user">
+                <h4 class="test-name">МАРИЯ</h4>
+                <span class="test-date">19.12.2018</span>
+              </div>
+
+              <div class="test-rating">
+                <span>●</span>
+                <span>●</span>
+                <span>●</span>
+              </div>
+            </div>
+
+            <p class="test-text">
+              Прекрасное место для отдыха. Очень интересные экспозиции,
+              рекомендую посетить всей семьей рекомендую посетить всей семьей
+              рекомендую посетить всей семьей...
+            </p>
+
+            <a href="#" class="test-link">Читать дальше</a>
+          </div>
+
+          <div class="test-card">
+            <div class="test-top">
+              <img src="img/img Services-sec 3.jpg" class="test-avatar" />
+
+              <div class="test-user">
+                <h4 class="test-name">МАРИЯ</h4>
+                <span class="test-date">19.12.2018</span>
+              </div>
+
+              <div class="test-rating">
+                <span>●</span>
+                <span>●</span>
+                <span>●</span>
+              </div>
+            </div>
+
+            <p class="test-text">
+              Прекрасное место для отдыха. Очень интересные экспозиции,
+              рекомендую посетить всей семьей рекомендую посетить всей семьей
+              рекомендую посетить всей семьей...
+            </p>
+
+            <a href="#" class="test-link">Читать дальше</a>
+          </div>
+
+          <div class="test-card">
+            <div class="test-top">
+              <img src="img/img Services-sec 3.jpg" class="test-avatar" />
+
+              <div class="test-user">
+                <h4 class="test-name">МАРИЯ</h4>
+                <span class="test-date">19.12.2018</span>
+              </div>
+
+              <div class="test-rating">
+                <span>●</span>
+                <span>●</span>
+                <span>●</span>
+              </div>
+            </div>
+
+            <p class="test-text">
+              Прекрасное место для отдыха. Очень интересные экспозиции,
+              рекомендую посетить всей семьей рекомендую посетить всей семьей
+              рекомендую посетить всей семьей...
+            </p>
+
+            <a href="#" class="test-link">Читать дальше</a>
+          </div>
+
+          <div class="test-card">
+            <div class="test-top">
+              <img src="img/img Services-sec 3.jpg" class="test-avatar" />
+
+              <div class="test-user">
+                <h4 class="test-name">МАРИЯ</h4>
+                <span class="test-date">19.12.2018</span>
+              </div>
+
+              <div class="test-rating">
+                <span>●</span>
+                <span>●</span>
+                <span>●</span>
+              </div>
+            </div>
+
+            <p class="test-text">
+              Прекрасное место для отдыха. Очень интересные экспозиции,
+              рекомендую посетить всей семьей рекомендую посетить всей семьей
+              рекомендую посетить всей семьей...
+            </p>
+
+            <a href="#" class="test-link">Читать дальше</a>
+          </div>
+
+          <div class="test-card">
+            <div class="test-top">
+              <img src="img/img Services-sec 3.jpg" class="test-avatar" />
+
+              <div class="test-user">
+                <h4 class="test-name">МАРИЯ</h4>
+                <span class="test-date">19.12.2018</span>
+              </div>
+
+              <div class="test-rating">
+                <span>●</span>
+                <span>●</span>
+                <span>●</span>
+              </div>
+            </div>
+
+            <p class="test-text">
+              Прекрасное место для отдыха. Очень интересные экспозиции,
+              рекомендую посетить всей семьей рекомендую посетить всей семьей
+              рекомендую посетить всей семьей...
+            </p>
+
+            <a href="#" class="test-link">Читать дальше</a>
+          </div>
+
+          <div class="test-card">
+            <div class="test-top">
+              <img src="img/img Services-sec 3.jpg" class="test-avatar" />
+
+              <div class="test-user">
+                <h4 class="test-name">МАРИЯ</h4>
+                <span class="test-date">19.12.2018</span>
+              </div>
+
+              <div class="test-rating">
+                <span>●</span>
+                <span>●</span>
+                <span>●</span>
+              </div>
+            </div>
+
+            <p class="test-text">
+              Прекрасное место для отдыха. Очень интересные экспозиции,
+              рекомендую посетить всей семьей рекомендую посетить всей семьей
+              рекомендую посетить всей семьей...
+            </p>
+
+            <a href="#" class="test-link">Читать дальше</a>
+          </div>
+        </div>
+
+        <button class="test-arrow right">&#10095;</button>
+      </div>
+
+      <div class="test-dots"></div>
+    </section>
+
+    <!-- Gallery-Section Code -->
+
+    <section class="gallery-sec">
+      <h2 class="gallery-title">ГАЛЕРЕЯ</h2>
+
+      <div class="gallery-grid">
+        <div class="gallery-item big">
+          <img src="img/img gallery-sec 1.webp" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/img gallery-sec 2.jpg" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/img gallery-sec 3.jpg" />
+        </div>
+
+        <div class="gallery-item tall">
+          <img src="img/img gallery-sec 4.jpg" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/img gallery-sec 5.jpg" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/img gallery-sec 6.jpg" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/img gallery-sec 7.jpg" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/img gallery-sec 8.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Infrastructure-Section Code -->
+
+    <section class="infra-sec">
+      <div class="infra-container">
+        <h2 class="infra-title">ИНФРАСТРУКТУРА</h2>
+
+        <div class="infra-grid">
+          <div class="infra-item">
+            <div class="infra-icon">🍽</div>
+            <h4>КАФЕ И РЕСТОРАНЫ</h4>
+            <p>
+              Если вы проголодались после длительной прогулки — посетите наши
+              кафе Если вы проголодались после длительной прогулки — посетите
+              наши кафе.
+            </p>
+          </div>
+
+          <div class="infra-item">
+            <div class="infra-icon">🚻</div>
+            <h4>БЕЗБАРЬЕРНАЯ СРЕДА</h4>
+            <p>
+              Пандусы, специальные лифты, доступная среда для всехПандусы,
+              специальные лифты, доступная среда для всех.
+            </p>
+          </div>
+
+          <div class="infra-item">
+            <div class="infra-icon">🛍</div>
+            <h4>СУВЕНИРНЫЙ МАГАЗИН</h4>
+            <p>
+              Если вы проголодались после длительной прогулки — посетите наши
+              кафе Если вы проголодались после длительной прогулки — посетите
+              наши кафе.
+            </p>
+          </div>
+
+          <div class="infra-item">
+            <div class="infra-icon">📸</div>
+            <h4>ФОТОЗОНЫ</h4>
+            <p>
+              Если вы проголодались после длительной прогулки — посетите наши
+              кафе Если вы проголодались после длительной прогулки — посетите
+              наши кафе. В каждой тематической зоне есть фотозоны.
+            </p>
+          </div>
+
+          <div class="infra-item">
+            <div class="infra-icon">🧭</div>
+            <h4>СЕРВИС</h4>
+            <p>
+              Если вы проголодались после длительной прогулки — посетите наши
+              кафе Если вы проголодались после длительной прогулки — посетите
+              наши кафе. Гид-помощник, навигация и помощь посетителям.
+            </p>
+          </div>
+        </div>
+
+        <button class="infra-btn">Смотреть схему океанариума</button>
+      </div>
+    </section>
+
+    <!-- Contact Section Code -->
+
+    <section class="contact-sec">
+      <h2 class="contact-title">КОНТАКТЫ</h2>
+
+      <div class="contact-map">
+        <iframe
+          src="https://maps.google.com/maps?q=Tashkent&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          frameborder="0"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-info">
+          <h4>АДРЕС</h4>
+          <p>г. Ташкент, ул. Пример 25</p>
+
+          <h4>РЕЖИМ РАБОТЫ</h4>
+          <p>Ежедневно 10:00–22:00</p>
+
+          <h4>САНИТАРНЫЙ ДЕНЬ</h4>
+          <p>Последний понедельник месяца</p>
+
+          <h4>КАССЫ РАБОТАЮТ</h4>
+          <p>Ежедневно 10:00–21:00</p>
+
+          <h4>ТЕЛЕФОН</h4>
+          <p>+998 97 575 46 06</p>
+
+          <div class="contact-socials">
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h4>ОСТАЛИСЬ ВОПРОСЫ?</h4>
+
+          <input type="text" placeholder="Ваше имя" />
+          <input type="text" placeholder="Ваш телефон" />
+          <textarea placeholder="Сообщение"></textarea>
+
+          <button class="contact-btn">Заказать звонок</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section Code -->
+
+    <footer class="footer-pro">
+      <div class="footer-overlay"></div>
+
+      <div class="footer-content">
+        <div class="footer-left">
+          <span class="footer-logo">AQUARIUM</span>
+        </div>
+
+        <div class="footer-nav">
+          <a href="#">Обитатели</a>
+          <a href="#">Услуги</a>
+          <a href="#">Цены</a>
+          <a href="#">Отзывы</a>
+          <a href="#">Галерея</a>
+          <a href="#">Инфраструктура</a>
+          <a href="#">Контакты</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
