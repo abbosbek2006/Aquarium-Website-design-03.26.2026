@@ -1404,7 +1404,6 @@ h1 {
     font-size: 14px;
   }
 
-  /* 🔥 ANIMALS FIX (768px style) */
   .carousel {
     height: 320px;
   }
@@ -1414,16 +1413,16 @@ h1 {
   }
 
   .card {
-    position: absolute; /* 🔥 MUHIM */
+    position: absolute; 
     top: 50%;
     left: 50%;
-    width: 180px;
-    height: 240px;
+    width: 280px;
+    height: 260px;
     transform: translate(-50%, -50%) scale(0.6);
     opacity: 0;
   }
 
-  /* faqat 1 ta ko‘rinadi */
+ 
   .card:not(.active) {
     display: none;
   }
@@ -1447,7 +1446,6 @@ h1 {
     right: 5px;
   }
 
-  /* qolgan sectionlarga tegmaymiz */
   .services-content {
     max-width: 100%;
   }
