@@ -1331,11 +1331,21 @@ h1 {
 
   /* animals FIX */
   .card {
-    width: 150px;
-    height: 200px;
+   width: 220px;
+    height: 280px;
   }
 
   .card.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+    .card.right-1,
+  .card.left-1,
+  .card.right-2,
+  .card.left-2 {
+    display: none;
+  }
+
+   .card.active {
     transform: translate(-50%, -50%) scale(1);
   }
 
@@ -1397,20 +1407,31 @@ h1 {
   /* animals slider SIMPLE */
   .carousel {
     height: auto;
+    overflow: hidden;
   }
 
   .card {
-    position: static;
+  position: relative;
     transform: none !important;
-    opacity: 1 !important;
-    width: 80%;
-    margin: 10px auto;
+    opacity: 0;
+    display: none;
+    width: 85%;
+    height: auto;
   }
 
   .carousel-track {
-    display: flex;
-    overflow-x: auto;
-    gap: 15px;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+   .card.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .card img {
+    height: auto;
   }
 
   /* services */
@@ -1457,6 +1478,14 @@ h1 {
     width: 100%;
   }
 
+   .arrow.left {
+    left: 5px;
+  }
+
+  .arrow.right {
+    right: 5px;
+  }
+
 }
 
 @media (max-width: 380px) {
@@ -1475,6 +1504,15 @@ h1 {
   .contact-card {
     width: 95%;
   }
+
+    .card {
+    width: 95%;
+  }
+
+  .arrow {
+    font-size: 18px;
+  }
+
 }
 
 section {
@@ -1484,3 +1522,4 @@ section {
  .gallery-track img {
     width: 100%;
   }
+
