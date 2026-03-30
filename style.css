@@ -105,7 +105,7 @@ body {
 }
 
 .profile-dropdown button:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .logout {
@@ -891,7 +891,7 @@ h1 {
 }
 
 .gallery-track img {
-  width: calc(25% - 15px); 
+  width: calc(25% - 15px);
   height: 300px;
   object-fit: cover;
   border-radius: 12px;
@@ -1264,11 +1264,62 @@ h1 {
   box-shadow: none;
 }
 
+/* Navigation Section Code */
+
+.navigation {
+  display: none;
+}
+
+.navigation {
+  width: 400px;
+  height: 70px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.navigation ul {
+  display: flex;
+  width: 350px;
+}
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.navigation ul li a .text {
+  font-size: 0.75rem;
+  color: var(--clr);
+}
+
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--clr);
+}
+
 /* Responsive */
 
 @media (max-width: 1024px) {
-
-    .menu {
+  .menu {
     display: none;
   }
 
@@ -1308,6 +1359,19 @@ h1 {
 }
 
 @media (max-width: 768px) {
+ 
+  .navigation {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
   .menu {
     display: none;
   }
@@ -1329,23 +1393,23 @@ h1 {
     right: 15px;
   }
 
-  /* animals FIX */
+  
   .card {
-   width: 260px;
+    width: 260px;
     height: 280px;
   }
 
   .card.active {
     transform: translate(-50%, -50%) scale(1);
   }
-    .card.right-1,
+  .card.right-1,
   .card.left-1,
   .card.right-2,
   .card.left-2 {
     display: none;
   }
 
-   .card.active {
+  .card.active {
     transform: translate(-50%, -50%) scale(1);
   }
 
@@ -1354,12 +1418,11 @@ h1 {
     display: none;
   }
 
-  /* pricing */
   .pricing-card {
     flex: 0 0 100%;
   }
 
-  /* testimonials */
+
   .test-card {
     width: 90%;
     left: 50%;
@@ -1370,27 +1433,46 @@ h1 {
     transform: translate(-50%, -50%) scale(1);
   }
 
-  /* gallery */
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* infra */
   .infra-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* contact */
   .contact-card {
     flex-direction: column;
   }
 }
 
 .gallery-track img {
-    width: 100%; 
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+
+  .navigation {
+    width: 95%;
+    height: 65px;
   }
 
-  @media (max-width: 480px) {
+  .navigation ul {
+    width: 100%;
+  }
+
+  .navigation ul li {
+    width: 100%;
+  }
+
+  .navigation ul li a .icon {
+    font-size: 1.3rem;
+  }
+
+  .navigation ul li a .text {
+    font-size: 0.7rem;
+  }
+
   h1 {
     font-size: 26px;
   }
@@ -1413,7 +1495,7 @@ h1 {
   }
 
   .card {
-    position: absolute; 
+    position: absolute;
     top: 50%;
     left: 50%;
     width: 280px;
@@ -1422,7 +1504,6 @@ h1 {
     opacity: 0;
   }
 
- 
   .card:not(.active) {
     display: none;
   }
@@ -1483,6 +1564,19 @@ h1 {
 }
 
 @media (max-width: 380px) {
+
+  .navigation {
+    height: 60px;
+  }
+
+  .navigation ul li a .icon {
+    font-size: 1.2rem;
+  }
+
+  .navigation ul li a .text {
+    font-size: 0.65rem;
+  }
+
   h1 {
     font-size: 22px;
   }
@@ -1500,31 +1594,29 @@ h1 {
   }
 
   .card {
-   width: 260px;
+    width: 260px;
     height: 280px;
   }
 
   .card.active {
     transform: translate(-50%, -50%) scale(1);
   }
-    .card.right-1,
+  .card.right-1,
   .card.left-1,
   .card.right-2,
   .card.left-2 {
     display: none;
   }
 
-   .card.active {
+  .card.active {
     transform: translate(-50%, -50%) scale(1);
   }
-  
 }
 
 section {
   scroll-margin-top: 80px;
 }
 
- .gallery-track img {
-    width: 100%;
-  }
-
+.gallery-track img {
+  width: 100%;
+}

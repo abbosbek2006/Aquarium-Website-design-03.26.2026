@@ -548,3 +548,19 @@ contactBtn.addEventListener("click", () => {
     }, 2000);
   }
 });
+
+
+// Navigation Section Code
+
+const list = document.querySelectorAll(".navigation ul li");
+const indicator = document.querySelector(".indicator");
+
+function activeLink() {
+  list.forEach((item) => item.classList.remove("active"));
+  this.classList.add("active");
+
+  const index = [...list].indexOf(this);
+  indicator.style.transform = `translateX(${index * 60}px)`;
+}
+
+list.forEach((item) => item.addEventListener("click", activeLink));
