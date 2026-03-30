@@ -21,6 +21,106 @@ body {
   margin: auto;
 }
 
+/* RIGHT SIDE */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* burger */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 22px;
+  height: 2px;
+  background: white;
+}
+
+/* avatar */
+.avatar img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  width: 220px;
+  background: #0f2b3c;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  padding: 15px;
+  gap: 10px;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* PROFILE DROPDOWN */
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  width: 260px;
+  background: #0f2b3c;
+  border-radius: 15px;
+  padding: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-top {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.profile-top img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.profile-dropdown button {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.profile-dropdown button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.logout {
+  color: red;
+}
+
+/* ACTIVE STATES */
+.mobile-menu.active {
+  display: flex;
+}
+
+.profile-dropdown.active {
+  display: flex;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -69,6 +169,8 @@ body {
 .phone {
   font-size: 14px;
 }
+
+/* Header Section Code */
 
 .hero {
   height: 100vh;
@@ -1148,6 +1250,19 @@ h1 {
 /* Responsive */
 
 @media (max-width: 1024px) {
+
+    .menu {
+    display: none;
+  }
+
+  .phone {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
   h1 {
     font-size: 40px;
   }

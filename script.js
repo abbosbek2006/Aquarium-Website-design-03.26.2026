@@ -48,6 +48,34 @@ dots.forEach((dot, index) => {
   });
 });
 
+// Header Section Code
+
+const burger = document.querySelector(".burger");
+const mobileMenu = document.querySelector(".mobile-menu");
+const avatar = document.querySelector(".avatar");
+const profile = document.querySelector(".profile-dropdown");
+
+burger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+  profile.classList.remove("active");
+});
+
+avatar.addEventListener("click", () => {
+  profile.classList.toggle("active");
+  mobileMenu.classList.remove("active");
+});
+
+/* outside click close */
+document.addEventListener("click", (e) => {
+  if (!burger.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove("active");
+  }
+
+  if (!avatar.contains(e.target) && !profile.contains(e.target)) {
+    profile.classList.remove("active");
+  }
+});
+
 // Animals Section Code
 
 const animalSection = document.querySelector(".animals");
