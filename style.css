@@ -885,6 +885,23 @@ h1 {
 
 /*  Gallery-Section Code */
 
+.gallery-track {
+  display: flex;
+  gap: 20px;
+}
+
+.gallery-track img {
+  width: calc(25% - 15px); 
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.gallery {
+  width: 100%;
+  overflow: hidden;
+}
+
 .gallery-sec {
   padding: 80px 0;
   background: #071826;
@@ -1359,6 +1376,10 @@ h1 {
   }
 }
 
+.gallery-track img {
+    width: 100%; 
+  }
+
 @media (max-width: 480px) {
   h1 {
     font-size: 26px;
@@ -1431,6 +1452,11 @@ h1 {
     gap: 15px;
     text-align: center;
   }
+
+  .gallery-track img {
+    width: 100%;
+  }
+
 }
 
 @media (max-width: 380px) {
@@ -1455,3 +1481,6 @@ section {
   scroll-margin-top: 80px;
 }
 
+ .gallery-track img {
+    width: 100%;
+  }
