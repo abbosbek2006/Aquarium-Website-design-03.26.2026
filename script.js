@@ -594,17 +594,7 @@ function activeLink() {
   indicator.style.transform = `translateX(${index * 60}px)`;
 }
 
-list.forEach((item) => {
-  item.addEventListener("click", function (e) {
-    const link = this.querySelector("a").getAttribute("href");
-
-    if (link === "#") {
-      e.preventDefault();
-    }
-
-    activeLink.call(this);
-  });
-});
+list.forEach((item) => item.addEventListener("click", activeLink));
 
 // IOS Safari Fix
 
