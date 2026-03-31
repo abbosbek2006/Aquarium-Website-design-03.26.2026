@@ -273,7 +273,7 @@ const total = pricingCards.length;
 
 function updatePricing() {
   const cardWidth = pricingCards[0].getBoundingClientRect().width;
-  const gap = 20; 
+  const gap = 20;
   const move = cardWidth + gap;
 
   pricingTrack.style.transform = `translateX(-${pricingIndex * move}px)`;
@@ -341,7 +341,6 @@ function updateDots() {
     dot.classList.toggle("active", i === pricingIndex);
   });
 
- 
   pricingPrev.style.opacity = pricingIndex === 0 ? "0.3" : "1";
   pricingNext.style.opacity =
     pricingIndex === total - visibleCards ? "0.3" : "1";
@@ -351,11 +350,10 @@ function nextPricing(isAuto = false) {
   if (pricingIndex < total - visibleCards) {
     pricingIndex++;
   } else {
-  
     if (isAuto) {
       pricingIndex = 0;
     } else {
-      return; 
+      return;
     }
   }
 
@@ -459,33 +457,49 @@ const galleryImages = [
   "img/img gallery-sec 10.webp",
 ];
 
-const galleryItems = document.querySelectorAll(".gallery-item img");
+const galleryItemsNew = document.querySelectorAll(".gallery-item");
+const prevBtn = document.querySelector(".gallery-arrow.left");
+const nextBtn = document.querySelector(".gallery-arrow.right");
 
-let gIndex = 0;
+let gIndexNew = 0;
+let autoGallery;
 
-galleryItems.forEach((img, i) => {
-  img.src = galleryImages[i];
-});
-
-function rotateGallery() {
-  galleryItems.forEach((img) => {
-    img.style.opacity = "0";
-  });
-
-  setTimeout(() => {
-    gIndex++;
-
-    galleryItems.forEach((img, i) => {
-      img.src = galleryImages[(gIndex + i) % galleryImages.length];
-    });
-
-    galleryItems.forEach((img) => {
-      img.style.opacity = "1";
-    });
-  }, 200);
+function showGallery(index) {
+  galleryItemsNew.forEach((item) => item.classList.remove("active"));
+  galleryItemsNew[index].classList.add("active");
 }
 
-setInterval(rotateGallery, 3000);
+function nextGallery() {
+  gIndexNew = (gIndexNew + 1) % galleryItemsNew.length;
+  showGallery(gIndexNew);
+}
+
+function prevGallery() {
+  gIndexNew = (gIndexNew - 1 + galleryItemsNew.length) % galleryItemsNew.length;
+  showGallery(gIndexNew);
+}
+
+function startGallery() {
+  autoGallery = setInterval(nextGallery, 3000);
+}
+
+function resetGallery() {
+  clearInterval(autoGallery);
+  startGallery();
+}
+
+nextBtn.addEventListener("click", () => {
+  nextGallery();
+  resetGallery();
+});
+
+prevBtn.addEventListener("click", () => {
+  prevGallery();
+  resetGallery();
+});
+
+showGallery(0);
+startGallery();
 
 let isDown = false;
 let startX;
@@ -549,6 +563,23 @@ contactBtn.addEventListener("click", () => {
   }
 });
 
+// Footer Section Code
+
+let deferredPrompt;
+const installBtn = document.getElementById("installBtn");
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installBtn.style.display = "block";
+});
+
+installBtn.addEventListener("click", async () => {
+  installBtn.style.display = "none";
+  deferredPrompt.prompt();
+  await deferredPrompt.userChoice;
+  deferredPrompt = null;
+});
 
 // Navigation Section Code
 
@@ -563,4 +594,35 @@ function activeLink() {
   indicator.style.transform = `translateX(${index * 60}px)`;
 }
 
-list.forEach((item) => item.addEventListener("click", activeLink));
+list.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    const link = this.querySelector("a").getAttribute("href");
+
+    if (link === "#") {
+      e.preventDefault();
+    }
+
+    activeLink.call(this);
+  });
+});
+
+// IOS Safari Fix
+
+function isIOS() {
+  return /iphone|ipad|ipod/i.test(navigator.userAgent);
+}
+
+function isInStandaloneMode() {
+  return ("standalone" in window.navigator) && window.navigator.standalone;
+}
+
+if (isIOS() && !isInStandaloneMode()) {
+  const hint = document.getElementById("iosHint");
+  if (hint) {
+    hint.style.display = "block";
+  }
+}
+
+window.addEventListener("appinstalled", () => {
+  console.log("App installed 🎉");
+});

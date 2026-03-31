@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#071826" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
@@ -21,43 +23,39 @@
         <div class="logo">AQUARIUM</div>
 
         <nav class="menu">
-          <a href="#">Океанариум</a>
-          <a href="#">Услуги</a>
-          <a href="#">Цены</a>
-          <a href="#">Отзывы</a>
-          <a href="#">Галерея</a>
-          <a href="#">Контакты</a>
+          <a href="#animals">Океанариум</a>
+          <a href="#services-sec">Услуги</a>
+          <a href="#pricing-sec">Цены</a>
+          <a href="#testimonials-sec">Отзывы</a>
+          <a href="#gallery-sec">Галерея</a>
+          <a href="#infra-sec">Инфраструктура</a>
+          <a href="#contact-sec">Контакты</a>
         </nav>
 
-        <!-- RIGHT SIDE -->
         <div class="nav-right">
           <div class="phone">+998 97 575 46 06</div>
 
-          <!-- burger -->
           <div class="burger">
             <span></span>
             <span></span>
             <span></span>
           </div>
 
-          <!-- avatar -->
           <div class="avatar">
             <img src="img/Portfolio IMG 2 logo - Copy.jpg" alt="user" />
           </div>
         </div>
       </div>
 
-      <!-- MOBILE MENU -->
-      <div class="mobile-menu">
-        <a href="#">Океанариум</a>
-        <a href="#">Услуги</a>
-        <a href="#">Цены</a>
-        <a href="#">Отзывы</a>
-        <a href="#">Галерея</a>
-        <a href="#">Контакты</a>
-      </div>
+      <nav class="menu">
+        <a href="#ocean">Океанариум</a>
+        <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contact">Контакты</a>
+      </nav>
 
-      <!-- PROFILE DROPDOWN -->
       <div class="profile-dropdown">
         <div class="profile-top">
           <img src="img/Portfolio IMG 2 logo - Copy.jpg" />
@@ -75,7 +73,7 @@
     </header>
 
     <!-- Hero Section Code -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="slides">
         <div class="slide active">
           <video autoplay muted loop playsinline preload="auto">
@@ -141,7 +139,7 @@
 
     <!-- Animals Section Code -->
 
-    <section class="animals">
+    <section class="animals" id="animals">
       <h2 class="animals-title">ОБИТАТЕЛИ</h2>
 
       <div class="carousel">
@@ -165,7 +163,7 @@
 
     <!-- Services-sec Section Code -->
 
-    <section class="services-sec">
+    <section class="services-sec" id="services-sec">
       <h2 class="services-title">УСЛУГИ</h2>
 
       <div class="services-wrapper">
@@ -192,7 +190,7 @@
 
     <!-- Pricing-slider Section Code -->
 
-    <section class="pricing-sec">
+    <section class="pricing-sec" id="pricing-sec">
       <h2 class="pricing-title">ЦЕНЫ</h2>
 
       <div class="pricing-slider">
@@ -395,7 +393,7 @@
 
     <!-- Testimonials-Section Code -->
 
-    <section class="testimonials-sec">
+    <section class="testimonials-sec" id="testimonials-sec">
       <h2 class="testimonials-title">ОТЗЫВЫ</h2>
 
       <div class="testimonials-slider">
@@ -561,10 +559,12 @@
 
     <!-- Gallery-Section Code -->
 
-    <section class="gallery-sec">
+    <section class="gallery-sec" id="gallery-sec">
       <h2 class="gallery-title">ГАЛЕРЕЯ</h2>
 
       <div class="gallery-grid">
+        <button class="gallery-arrow left">&#10094;</button>
+
         <div class="gallery-item big">
           <img src="img/img gallery-sec 1.webp" />
         </div>
@@ -596,12 +596,14 @@
         <div class="gallery-item">
           <img src="img/img gallery-sec 8.jpg" />
         </div>
+
+        <button class="gallery-arrow right">&#10095;</button>
       </div>
     </section>
 
     <!-- Infrastructure-Section Code -->
 
-    <section class="infra-sec">
+    <section class="infra-sec" id="infra-sec">
       <div class="infra-container">
         <h2 class="infra-title">ИНФРАСТРУКТУРА</h2>
 
@@ -662,7 +664,7 @@
 
     <!-- Contact Section Code -->
 
-    <section class="contact-sec">
+    <section class="contact-sec" id="contact-sec">
       <h2 class="contact-title">КОНТАКТЫ</h2>
 
       <div class="contact-map">
@@ -716,18 +718,22 @@
       <div class="footer-overlay"></div>
 
       <div class="footer-content">
+        <div class="footer-install">
+          <button id="installBtn">Install App</button>
+        </div>
+
         <div class="footer-left">
           <span class="footer-logo">AQUARIUM</span>
         </div>
 
         <div class="footer-nav">
-          <a href="#">Обитатели</a>
-          <a href="#">Услуги</a>
-          <a href="#">Цены</a>
-          <a href="#">Отзывы</a>
-          <a href="#">Галерея</a>
-          <a href="#">Инфраструктура</a>
-          <a href="#">Контакты</a>
+          <a href="#animals">Обитатели</a>
+          <a href="#services-sec">Услуги</a>
+          <a href="#pricing-sec">Цены</a>
+          <a href="#testimonials-sec">Отзывы</a>
+          <a href="#gallery-sec">Галерея</a>
+          <a href="#infra-sec">Инфраструктура</a>
+          <a href="#contact-sec">Контакты</a>
         </div>
       </div>
     </footer>
@@ -736,9 +742,8 @@
 
    <div class="navigation">
   <ul>
-
-    <li style="--clr:#222;">
-      <a href="#">
+    <li style="--clr: #222">
+      <a href="#hero">
         <span class="icon">
           <ion-icon name="home-outline"></ion-icon>
         </span>
@@ -746,8 +751,8 @@
       </a>
     </li>
 
-    <li style="--clr:#222;">
-      <a href="#">
+    <li style="--clr: #222">
+      <a href="#animals">
         <span class="icon">
           <ion-icon name="person-outline"></ion-icon>
         </span>
@@ -755,8 +760,8 @@
       </a>
     </li>
 
-    <li style="--clr:#222;">
-      <a href="#">
+    <li style="--clr: #222">
+      <a href="#services-sec">
         <span class="icon">
           <ion-icon name="chatbubble-outline"></ion-icon>
         </span>
@@ -764,8 +769,8 @@
       </a>
     </li>
 
-    <li style="--clr:#222;">
-      <a href="#">
+    <li style="--clr: #222">
+      <a href="#gallery-sec">
         <span class="icon">
           <ion-icon name="image-outline"></ion-icon>
         </span>
@@ -773,18 +778,32 @@
       </a>
     </li>
 
-    <li style="--clr:#222;">
-      <a href="#">
+    <li style="--clr: #222">
+      <a href="#contact-sec">
         <span class="icon">
           <ion-icon name="settings-outline"></ion-icon>
         </span>
         <span class="text">Settings</span>
       </a>
     </li>
-
   </ul>
 </div>
 
     <script src="script.js"></script>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./sw.js")
+            .then(() => console.log("✅ Service Worker registered"))
+            .catch((err) => console.log("❌ SW error:", err));
+        });
+      }
+    </script>
+
+    <div id="iosHint" class="ios-hint">
+      📲 To install app: tap <b>Share</b> → <b>Add to Home Screen</b>
+    </div>
   </body>
 </html>
